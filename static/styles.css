@@ -1,0 +1,178 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Vertically center everything */
+  align-items: center;      /* Horizontally center everything */
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1; /* Ensures content stays above the overlay */
+}
+
+/* Header */
+.header {
+  text-align: center;
+  position: absolute;  /* Fix it to the top */
+  top: 20px;  /* Give some space from the top */
+  width: 100%;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e63946;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.header h1 span {
+  color: #fff;
+}
+
+.header h1 .highlight {
+  color: #e63946;
+}
+
+/* Download Wrapper */
+.download-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px; /* Space between header and download section */
+  width: 100%;
+}
+
+/* BYPASS XYZ header */
+.bypass-header {
+  margin-bottom: 20px;  /* Space between header and download box */
+}
+
+.bypass-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e63946;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.bypass-header h1 span {
+  color: #fff;
+}
+
+.bypass-header h1 .highlight {
+  color: #e63946;
+}
+
+/* Download Section */
+.download-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  max-width: 800px;
+  margin-top: 30px; /* Space below the header */
+}
+
+/* Version Label */
+.version-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.version-box {
+  background-color: #e63946;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.version-text {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Description */
+.description {
+  flex-grow: 1;
+  text-align: left;
+  margin-right: 20px;
+}
+
+.description p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Download Button */
+.download-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-button {
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.download-button:hover {
+  background-color: #d62828;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(227, 57, 70, 0.4);
+}
+
+/* Spinner Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Fade In Animation for overlay */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
